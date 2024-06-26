@@ -29,4 +29,7 @@ public class Chargers {
 
     @Column(name="compatibility")
     private String compatibility;
+
+    @Column(name="power wattage")
+    private int wattage;
 }

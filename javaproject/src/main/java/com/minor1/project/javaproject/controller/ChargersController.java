@@ -42,6 +42,7 @@ public class ChargersController {
         updatecharger.setLatitude(chargerDetails.getLatitude());
         updatecharger.setRate(chargerDetails.getRate());
         updatecharger.setCompatibility(chargerDetails.getCompatibility());
+        updatecharger.setWattage(chargerDetails.getWattage());
 
         chargersRepository.save(updatecharger);
         return ResponseEntity.ok(updatecharger);
