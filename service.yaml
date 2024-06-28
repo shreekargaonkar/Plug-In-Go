@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-app-service  # Replace with your app's name
+spec:
+  selector:
+    app: react-app  # Matches the label in the pod template
+  ports:
+  - protocol: TCP
+    port: 80  # External port for users to access (usually 80)
+    targetPort: 3000  # Port to forward traffic to within the pods
+  type: LoadBalancer  # Optional: Route traffic to available pods
